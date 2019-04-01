@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
+use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -58,6 +58,7 @@ class DatabaseSeeder extends Seeder
 
     private function userDetailFactory($i)
     {
+
         return [
             'user_id'            => $i / 5, // ユーザ毎に5レコードづつ
             'type_kind_2'        => $i % 2,
@@ -66,6 +67,9 @@ class DatabaseSeeder extends Seeder
             'type_kind_2_index'  => $i % 2,
             'type_kind_10_index' => $i % 10,
             'seq_index'          => $i,
+            'nullable_a'         => ($i % 2 === 0) ? $i : null,
+            'nullable_b'         => ($i % 3 === 0) ? $i : null,
+            'nullable_c'         => ($i % 4 === 0) ? $i : null,
         ];
     }
 }

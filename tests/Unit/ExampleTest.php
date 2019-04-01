@@ -2,10 +2,9 @@
 
 namespace Tests\Unit;
 
-use App\User;
+use App\UserDetail;
 use DB;
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ExampleTest extends TestCase
 {
@@ -104,13 +103,44 @@ class ExampleTest extends TestCase
 //                ->where('user_details.seq_index', 50000)
 //                ->get();
 //        });
-        $benchmark->add('detailをwith', function () {
+//        $benchmark->add('detailをwith', function () {
+//            /*
+//             * 7ms
+//             */
+//            User::where('id', 50000)
+//                ->with('details')
+//                ->get();
+//        });
+//        $benchmark->add('detailをnot nullで絞り込み', function () {
+//            /*
+//             * 89ms
+//             */
+//            UserDetail::whereNotNull('nullable_a')
+//                ->offset(40000) // offsetに比例して処理時間が増えていく
+//                ->take(10)
+//                ->get();
+//            // TODO: indexあり版
+//        });
+//        $benchmark->add('nullableなカラムをnot nullで絞り込み', function () {
+//            /*
+//             * 89ms
+//             */
+//            UserDetail::whereNotNull('nullable_a')
+//                ->offset(40000) // offsetに比例して処理時間が増えていく
+//                ->take(10)
+//                ->get();
+//            // TODO: indexあり版
+//        });
+        $benchmark->add('nullableな2カラムをnot nullで絞り込み', function () {
             /*
-             * 7ms
+             * 121ms
              */
-            User::where('id', 50000)
-                ->with('details')
+            UserDetail::whereNotNull('nullable_a')
+                ->whereNotNull('nullable_b')
+                ->offset(16657)// offsetに比例して処理時間が増えていく
+                ->take(10)
                 ->get();
+            // TODO: indexあり版
         });
 
         $benchmark->run();

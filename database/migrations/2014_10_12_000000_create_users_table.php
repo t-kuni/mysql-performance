@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateUsersTable extends Migration
 {
@@ -33,6 +33,9 @@ class CreateUsersTable extends Migration
             $table->integer('type_kind_2_index')->index();
             $table->integer('type_kind_10_index')->index();
             $table->integer('seq_index')->index();
+            $table->integer('nullable_a')->nullable();
+            $table->integer('nullable_b')->nullable();
+            $table->integer('nullable_c')->nullable();
             $table->timestamps();
         });
 
