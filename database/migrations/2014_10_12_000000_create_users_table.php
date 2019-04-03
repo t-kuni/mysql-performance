@@ -17,11 +17,13 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->integer('type_kind_2');
-            $table->integer('type_kind_10');
-            $table->integer('seq');
             $table->integer('type_kind_2_index')->index();
+            $table->integer('type_kind_10');
             $table->integer('type_kind_10_index')->index();
+            $table->integer('seq');
             $table->integer('seq_index')->index();
+            $table->integer('rand');
+            $table->integer('rand_index')->index();
             $table->timestamps();
         });
         Schema::create('user_details', function (Blueprint $table) {
@@ -36,6 +38,11 @@ class CreateUsersTable extends Migration
             $table->integer('nullable_a')->nullable();
             $table->integer('nullable_b')->nullable();
             $table->integer('nullable_c')->nullable();
+            $table->integer('nullable_a_index')->nullable()->index();
+            $table->integer('nullable_b_index')->nullable()->index();
+            $table->integer('nullable_c_index')->nullable()->index();
+            $table->integer('rand');
+            $table->integer('rand_index')->index();
             $table->timestamps();
         });
 

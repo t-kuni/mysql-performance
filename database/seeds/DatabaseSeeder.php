@@ -53,6 +53,8 @@ class DatabaseSeeder extends Seeder
             'type_kind_2_index'  => $i % 2,
             'type_kind_10_index' => $i % 10,
             'seq_index'          => $i,
+            'rand'               => rand(1, 10000),
+            'rand_index'         => rand(1, 10000),
         ];
     }
 
@@ -70,6 +72,11 @@ class DatabaseSeeder extends Seeder
             'nullable_a'         => ($i % 2 === 0) ? $i : null,
             'nullable_b'         => ($i % 3 === 0) ? $i : null,
             'nullable_c'         => ($i % 4 === 0) ? $i : null,
+            'nullable_a_index'   => ($i % 2 === 0) ? $i : null,
+            'nullable_b_index'   => ($i % 3 === 0) ? $i : null,
+            'nullable_c_index'   => ($i % 4 === 0) ? $i : null,
+            'rand'               => rand(1, 10000),
+            'rand_index'         => rand(1, 10000),
         ];
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Tests\Unit;
 
-use App\UserDetail;
+use App\User;
 use DB;
 use Tests\TestCase;
 
@@ -129,19 +129,89 @@ class ExampleTest extends TestCase
 //                ->offset(40000) // offsetに比例して処理時間が増えていく
 //                ->take(10)
 //                ->get();
-//            // TODO: indexあり版
 //        });
-        $benchmark->add('nullableな2カラムをnot nullで絞り込み', function () {
+//        $benchmark->add('nullableな2カラムをnot nullで絞り込み', function () {
+//            /*
+//             * 121ms
+//             */
+//            UserDetail::whereNotNull('nullable_a')
+//                ->whereNotNull('nullable_b')
+//                ->offset(16657)// offsetに比例して処理時間が増えていく
+//                ->take(10)
+//                ->get();
+//        });
+//        $benchmark->add('nullable&indexedなカラムをnot nullで絞り込み', function () {
+//            /*
+//             * 89ms
+//             * 選択率が低く、インデックスが使われないため遅い
+//             */
+//            UserDetail::whereNotNull('nullable_a_index')
+//                ->offset(40000) // offsetに比例して処理時間が増えていく
+//                ->take(10)
+//                ->get();
+//        });
+//        $benchmark->add('nullable&indexedな2カラムをnot nullで絞り込み', function () {
+//            /*
+//             * 121ms
+//             * 選択率が低く、インデックスが使われないため全件検索になり遅い
+//             */
+//            UserDetail::whereNotNull('nullable_a_index')
+//                ->whereNotNull('nullable_b_index')
+//                ->offset(16657)// offsetに比例して処理時間が増えていく
+//                ->take(10)
+//                ->get();
+//        });
+//        $benchmark->add('乱数で並べかえ', function () {
+//            /*
+//             * 166ms
+//             * 全件検索になって遅い
+//             */
+//            User::orderBy('rand')
+//                ->take(10)
+//                ->get();
+//        });
+//        $benchmark->add('乱数で並べかえ（インデックスあり）', function () {
+//            /*
+//             * 4ms
+//             * インデックスがあるので早い
+//             */
+//            User::orderBy('rand_index')
+//                ->take(10)
+//                ->get();
+//        });
+//        $benchmark->add('type_kind_10_indexで絞り込んで、乱数で並べかえ（インデックスあり）', function () {
+//            /*
+//             * 5ms
+//             * orderby狙いのindexが発動して高速
+//             */
+//            User::where('type_kind_10_index', 8)
+//                ->orderBy('rand_index')
+//                ->take(10)
+//                ->get();
+//        });
+//        $benchmark->add('type_kind_10_indexで絞り込んで、乱数で並べかえ（インデックスあり）', function () {
+//            /*
+//             * 49ms
+//             * orderby狙いのindexが発動しているがoffsetが大きくなると全件検索に近づく
+//             */
+//            User::where('type_kind_10_index', 8)
+//                ->orderBy('rand_index')
+//                ->offset(10000)
+//                ->take(10)
+//                ->get();
+//        });
+        $benchmark->add('', function () {
             /*
-             * 121ms
              */
-            UserDetail::whereNotNull('nullable_a')
-                ->whereNotNull('nullable_b')
-                ->offset(16657)// offsetに比例して処理時間が増えていく
+            User::where('type_kind_10_index', 8)
+                ->orderBy('rand_index')
+                ->offset(10000)
                 ->take(10)
                 ->get();
-            // TODO: indexあり版
         });
+        // order byとnull
+        // whereにindex
+        // TODO: 状態を別テーブルに切り出す
 
         $benchmark->run();
     }
