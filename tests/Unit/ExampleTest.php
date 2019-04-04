@@ -2,7 +2,7 @@
 
 namespace Tests\Unit;
 
-use App\User;
+use App\UserDetail;
 use DB;
 use Tests\TestCase;
 
@@ -200,17 +200,64 @@ class ExampleTest extends TestCase
 //                ->take(10)
 //                ->get();
 //        });
-        $benchmark->add('', function () {
+//        $benchmark->add('nullを含む乱数で並べかえ（インデックスなし）', function () {
+//            /*
+//             * 226ms
+//             * nullが先に来る。遅い。
+//             */
+//            User::orderBy('rand_nullable')
+//                ->take(10)
+//                ->get();
+//        });
+//        $benchmark->add('where（インデックスなし）', function () {
+//            /*
+//             * 10765 ms
+//             * 全件検索になり遅い
+//             */
+//            User::where('type_kind_2', 1)
+//                ->limit(500)
+//                ->get();
+//        });
+//        $benchmark->add('where（インデックスあり）', function () {
+//            /*
+//             * 97 ms
+//             * 全件検索にはならない
+//             */
+//            User::where('type_kind_2_index', 1)
+//                ->limit(500)
+//                ->get();
+//        });
+//        $benchmark->add('複数where（一部インデックスあり）', function () {
+//            /*
+//             * 1390ms
+//             * kind_3のindexが使われているが、その中で全件検索が行われて遅い
+//             */
+//            UserDetail::where('type_kind_3_index', 1)
+//                ->where('type_kind_4', 1)
+//                ->get();
+//        });
+//        $benchmark->add('複数where（両方にインデックスあり）', function () {
+//            /*
+//             * 1403ms
+//             * 選択率の高い、kind_4のindexが使われている。
+//             * 1テーブルにつき1つのindexしか使われないので、結局、kind_3の全件検索が行われて遅い
+//             */
+//            UserDetail::where('type_kind_3_index', 1)
+//                ->where('type_kind_4_index', 1)
+//                ->get();
+//        });
+        $benchmark->add('複数where（複合インデックスあり）', function () {
             /*
+             * 1403ms
+             * 選択率の高い、kind_4のindexが使われている。
+             * 1テーブルにつき1つのindexしか使われないので、結局、kind_3の全件検索が行われて遅い
              */
-            User::where('type_kind_10_index', 8)
-                ->orderBy('rand_index')
-                ->offset(10000)
-                ->take(10)
+            UserDetail::where('type_kind_3_index', 1)
+                ->where('type_kind_4_index', 1)
                 ->get();
         });
-        // order byとnull
         // whereにindex
+        // レコード無しとleft outer join
         // TODO: 状態を別テーブルに切り出す
 
         $benchmark->run();
