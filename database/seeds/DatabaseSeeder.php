@@ -75,6 +75,8 @@ class DatabaseSeeder extends Seeder
             'rand_index'          => rand(1, 10000),
             'rand_nullable'       => $i % 3 === 0 ? null : rand(1, 10000),
             'rand_nullable_index' => $i % 3 === 0 ? null : rand(1, 10000),
+            'boolean_10'          => $i % 10 === 0,
+            'boolean_9'           => $i % 9 === 0,
         ];
     }
 

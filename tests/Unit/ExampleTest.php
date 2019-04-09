@@ -2,7 +2,7 @@
 
 namespace Tests\Unit;
 
-use App\UserDetail;
+use App\User;
 use DB;
 use Tests\TestCase;
 
@@ -246,14 +246,60 @@ class ExampleTest extends TestCase
 //                ->where('type_kind_4_index', 1)
 //                ->get();
 //        });
-        $benchmark->add('複数where（複合インデックスあり）', function () {
+//        $benchmark->add('複数where（複合インデックスあり）', function () {
+//            /*
+//             * 1168ms
+//             * 複合インデックス
+//             */
+//            User::where('type_kind_3_index', 1)
+//                ->where('type_kind_4_index', 1)
+//                ->offset(10000)
+//                ->limit(10)
+//                ->get();
+//        });
+//        $benchmark->add('Order byで末尾のレコードを取る', function () {
+//            /*
+//             * 328ms
+//             * 全件取得になる（offsetとlimitでページングするのが良くない）
+//             */
+//            User::orderBy('rand_index')
+//                ->offset(90000)
+//                ->limit(10)
+//                ->get();
+//        });
+//        $benchmark->add('Order byで末尾のレコードを取る(カバリングインデックス)', function () {
+//            /*
+//             * 34ms
+//             * １つ前のサンプルでは全件取得になっているが、カバリングインデックスを活用すると高速化する
+//             * selectにidを追加してもそこまで遅くならない
+//             * indexが付与されているカラムのみであれば早い模様。（別のインデックスでも可）
+//             */
+//            User::select('rand_index')
+//                ->orderBy('rand_index')
+//                ->offset(90000)
+//                ->limit(10)
+//                ->get();
+//        });
+//        $benchmark->add('Order by＋whereで全件取得', function () {
+//            /*
+//             * 1441ms
+//             * type:refなのでインデックスで絞りこんでから約17000件をfilesortしている
+//             */
+//            User::query()
+//                ->orderBy('rand_index')
+//                ->where('type_kind_10_index', 5)
+//                ->get();
+//        });
+        $benchmark->add('Order by＋whereで100件取得', function () {
             /*
-             * 1403ms
-             * 選択率の高い、kind_4のindexが使われている。
-             * 1テーブルにつき1つのindexしか使われないので、結局、kind_3の全件検索が行われて遅い
+             * 18ms
+             * インデックス使ってソートした状態でデータを取り出しながら（フルインデックススキャン）
+             * 条件に一致するデータが100件になったら処理を終了している
              */
-            UserDetail::where('type_kind_3_index', 1)
-                ->where('type_kind_4_index', 1)
+            User::query()
+                ->orderBy('rand_index')
+                ->where('type_kind_10_index', 5)
+                ->limit(100)
                 ->get();
         });
         // whereにindex

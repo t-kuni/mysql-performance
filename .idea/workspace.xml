@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="945bf67a-ae0e-458b-9749-6817d7223bd8" name="Default Changelist" comment="一旦コミット">
+    <list default="true" id="945bf67a-ae0e-458b-9749-6817d7223bd8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
@@ -13,11 +13,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="DONT_SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="DONT_SYNCHRONIZE">
     <pharConfigPath>C:\Users\tig\Documents\mysql-performance\composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
@@ -30,8 +30,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="34" column="70" selection-start-line="34" selection-start-column="70" selection-end-line="34" selection-end-column="70" />
+            <state relative-caret-position="304">
+              <caret line="32" column="39" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="39" />
+              <caret line="33" column="38" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="38" />
               <folding>
                 <element signature="e#7#52#0#PHP" expanded="true" />
               </folding>
@@ -39,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+            <state relative-caret-position="209">
+              <caret line="78" column="43" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
               <folding>
                 <element signature="e#7#36#0#PHP" expanded="true" />
               </folding>
@@ -51,14 +52,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Unit/ExampleTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="249" column="35" selection-start-line="249" selection-start-column="35" selection-end-line="249" selection-end-column="35" />
+            <state relative-caret-position="114">
+              <caret line="297" column="44" selection-start-line="297" selection-start-column="44" selection-end-line="297" selection-end-column="44" />
               <folding>
                 <element signature="e#30#43#0#PHP" expanded="true" />
-                <marker date="1554390094684" expanded="true" signature="1169:1411" ph="..." />
+                <marker date="1554819953971" expanded="true" signature="1169:1411" ph="..." />
               </folding>
             </state>
           </provider>
@@ -67,7 +68,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
+            <state relative-caret-position="722">
               <caret line="40" column="49" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
             </state>
           </provider>
@@ -87,6 +88,9 @@
       <find>setCount</find>
       <find>$this-&gt;n</find>
       <find>$this-&gt;tests</find>
+      <find>pushCommandToQueue</find>
+      <find>order</find>
+      <find>rand</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\tig\Documents\mysql-performance\vendor\laravel\framework\src\Illuminate\Database\Eloquent</dir>
@@ -104,9 +108,9 @@
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/database/factories/UserFactory.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
-        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/tests/Unit/ExampleTest.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
+        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
       </list>
     </option>
   </component>
@@ -197,121 +201,19 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
-    <option name="width" value="1919" />
-    <option name="height" value="1029" />
+    <option name="width" value="1920" />
+    <option name="height" value="1030" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="mysql-performance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysql-performance" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mysql-performance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysql-performance" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mysql-performance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysql-performance" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="factories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mysql-performance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysql-performance" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mysql-performance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysql-performance" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="seeds" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mysql-performance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysql-performance" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mysql-performance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysql-performance" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="Unit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mysql-performance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysql-performance" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mysql-performance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysql-performance" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mysql-performance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysql-performance" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mysql-performance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysql-performance" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mysql-performance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysql-performance" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Illuminate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mysql-performance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysql-performance" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Illuminate" type="462c0819:PsiDirectoryNode" />
-              <item name="Database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mysql-performance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysql-performance" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Illuminate" type="462c0819:PsiDirectoryNode" />
-              <item name="Database" type="462c0819:PsiDirectoryNode" />
-              <item name="Eloquent" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../discus" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -365,7 +267,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553958882146</updated>
-      <workItem from="1553958883513" duration="30908000" />
+      <workItem from="1553958883513" duration="32643000" />
+      <workItem from="1554513223441" duration="718000" />
+      <workItem from="1554646956718" duration="5237000" />
     </task>
     <task id="LOCAL-00001" summary="nullableなカラム追加">
       <created>1554127758336</created>
@@ -381,43 +285,50 @@
       <option name="project" value="LOCAL" />
       <updated>1554300939821</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="複合インデックスなど">
+      <created>1554390106604</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1554390106604</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ExampleTest_testBasicTest - 2019.04.03 at 23h 40m 13s.xml">
-      <configuration name="ExampleTest.testBasicTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="ExampleTest_testBasicTest - 2019.04.04 at 22h 49m 45s.xml">
-      <configuration name="ExampleTest.testBasicTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="ExampleTest_testBasicTest - 2019.04.04 at 22h 56m 08s.xml">
-      <configuration name="ExampleTest.testBasicTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="ExampleTest_testBasicTest - 2019.04.04 at 22h 56m 15s.xml">
-      <configuration name="ExampleTest.testBasicTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="ExampleTest_testBasicTest - 2019.04.04 at 23h 06m 51s.xml">
-      <configuration name="ExampleTest.testBasicTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="ExampleTest_testBasicTest - 2019.04.04 at 23h 07m 47s.xml">
-      <configuration name="ExampleTest.testBasicTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="ExampleTest_testBasicTest - 2019.04.04 at 23h 18m 36s.xml">
-      <configuration name="ExampleTest.testBasicTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="ExampleTest_testBasicTest - 2019.04.04 at 23h 19m 04s.xml">
-      <configuration name="ExampleTest.testBasicTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="ExampleTest_testBasicTest - 2019.04.04 at 23h 48m 21s.xml">
-      <configuration name="ExampleTest.testBasicTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
     <history-entry file="ExampleTest_testBasicTest - 2019.04.04 at 23h 55m 59s.xml">
+      <configuration name="ExampleTest.testBasicTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ExampleTest_testBasicTest - 2019.04.05 at 00h 05m 21s.xml">
+      <configuration name="ExampleTest.testBasicTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ExampleTest_testBasicTest - 2019.04.05 at 00h 05m 55s.xml">
+      <configuration name="ExampleTest.testBasicTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ExampleTest_testBasicTest - 2019.04.05 at 00h 06m 08s.xml">
+      <configuration name="ExampleTest.testBasicTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ExampleTest_testBasicTest - 2019.04.05 at 00h 13m 01s.xml">
+      <configuration name="ExampleTest.testBasicTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ExampleTest_testBasicTest - 2019.04.09 at 21h 35m 59s.xml">
+      <configuration name="ExampleTest.testBasicTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ExampleTest_testBasicTest - 2019.04.09 at 21h 46m 00s.xml">
+      <configuration name="ExampleTest.testBasicTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ExampleTest_testBasicTest - 2019.04.09 at 21h 47m 37s.xml">
+      <configuration name="ExampleTest.testBasicTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ExampleTest_testBasicTest - 2019.04.09 at 22h 38m 13s.xml">
+      <configuration name="ExampleTest.testBasicTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ExampleTest_testBasicTest - 2019.04.09 at 23h 17m 43s.xml">
       <configuration name="ExampleTest.testBasicTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30908000" />
+    <option name="totallyTimeSpent" value="38598000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -432,14 +343,9 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.24966533" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.49933067" visible="true" weight="0.32896653" />
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.50066936" side_tool="true" weight="0.32896653" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49933067" weight="0.32896653" />
@@ -447,10 +353,16 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49933067" weight="0.32896653" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49933067" visible="true" weight="0.32896653" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50066936" side_tool="true" weight="0.32896653" />
+      <window_info anchor="right" id="PlantUML" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -482,7 +394,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="nullableなカラム追加" />
     <MESSAGE value="一旦コミット" />
-    <option name="LAST_COMMIT_MESSAGE" value="一旦コミット" />
+    <MESSAGE value="複合インデックスなど" />
+    <option name="LAST_COMMIT_MESSAGE" value="複合インデックスなど" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -526,27 +439,12 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/Seeders.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" />
+    <entry file="file://$PROJECT_DIR$/database/seeds/Seeders.php" />
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_4.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="381">
           <caret line="249" column="9" selection-start-line="249" selection-start-column="9" selection-end-line="249" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -626,17 +524,36 @@
         <state relative-caret-position="-57" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
+        <state relative-caret-position="722">
           <caret line="40" column="49" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Unit/ExampleTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="297" column="44" selection-start-line="297" selection-start-column="44" selection-end-line="297" selection-end-column="44" />
+          <folding>
+            <element signature="e#30#43#0#PHP" expanded="true" />
+            <marker date="1554819953971" expanded="true" signature="1169:1411" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="34" column="70" selection-start-line="34" selection-start-column="70" selection-end-line="34" selection-end-column="70" />
+        <state relative-caret-position="304">
+          <caret line="32" column="39" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="39" />
+          <caret line="33" column="38" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="38" />
           <folding>
             <element signature="e#7#52#0#PHP" expanded="true" />
           </folding>
@@ -645,21 +562,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+        <state relative-caret-position="209">
+          <caret line="78" column="43" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
           <folding>
             <element signature="e#7#36#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Unit/ExampleTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="249" column="35" selection-start-line="249" selection-start-column="35" selection-end-line="249" selection-end-column="35" />
-          <folding>
-            <element signature="e#30#43#0#PHP" expanded="true" />
-            <marker date="1554390094684" expanded="true" signature="1169:1411" ph="..." />
           </folding>
         </state>
       </provider>

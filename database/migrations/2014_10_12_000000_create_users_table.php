@@ -30,9 +30,12 @@ class CreateUsersTable extends Migration
             $table->integer('rand_index')->index();
             $table->integer('rand_nullable')->nullable();
             $table->integer('rand_nullable_index')->nullable()->index();
+            $table->boolean('boolean_10')->nullable();
+            $table->boolean('boolean_9')->nullable();
             $table->timestamps();
 
             $table->index(['type_kind_3_index', 'type_kind_4_index']);
+            $table->index(['rand', 'boolean_10', 'boolean_9']);
         });
         Schema::create('user_details', function (Blueprint $table) {
             $table->bigIncrements('id');
