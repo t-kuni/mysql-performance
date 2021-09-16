@@ -1,46 +1,45 @@
 <?php
 
+//namespace Database\Seeders;
+
 use Faker\Generator as Faker;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
     /**
-     * @var Faker
-     */
-    private $faker;
-
-    /**
      * Seed the application's database.
      *
      * @return void
      */
-    public function run(Faker $faker)
+    public function run()
     {
-        $this->faker = $faker;
+        $this->call(\Database\Seeders\GroupByRecordTableSeeder::class);
+        $this->call(\Database\Seeders\SingleIndexRecordTableSeeder::class);
+        $this->call(\Database\Seeders\MultiIndexRecordTableSeeder::class);
 
-        DB::table('users')->truncate();
-        DB::table('user_details')->truncate();
-
-        // 試しに一回流す
-        $data = $this->makeData(0, 'userFactory', 1);
-        DB::table('users')->insert($data);
-        $data = $this->makeData(0, 'userDetailFactory', 1);
-        DB::table('user_details')->insert($data);
-
-        // $this->call(UsersTableSeeder::class);
-        DB::table('users')->truncate();
-        DB::table('user_details')->truncate();
-
-        for ($i = 0; $i < 40; $i++) {
-            $data = $this->makeData($i, 'userFactory', 2500);
-            DB::table('users')->insert($data);
-        }
-
-        for ($i = 0; $i < 40; $i++) {
-            $data = $this->makeData($i, 'userDetailFactory', 2500);
-            DB::table('user_details')->insert($data);
-        }
+//        DB::table('users')->truncate();
+//        DB::table('user_details')->truncate();
+//
+//        // 試しに一回流す
+//        $data = $this->makeData(0, 'userFactory', 1);
+//        DB::table('users')->insert($data);
+//        $data = $this->makeData(0, 'userDetailFactory', 1);
+//        DB::table('user_details')->insert($data);
+//
+//        // $this->call(UsersTableSeeder::class);
+//        DB::table('users')->truncate();
+//        DB::table('user_details')->truncate();
+//
+//        for ($i = 0; $i < 40; $i++) {
+//            $data = $this->makeData($i, 'userFactory', 2500);
+//            DB::table('users')->insert($data);
+//        }
+//
+//        for ($i = 0; $i < 40; $i++) {
+//            $data = $this->makeData($i, 'userDetailFactory', 2500);
+//            DB::table('user_details')->insert($data);
+//        }
     }
 
     private function makeDataThousand($baseIndex, $factory)

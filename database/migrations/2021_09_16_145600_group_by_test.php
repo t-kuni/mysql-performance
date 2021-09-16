@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class GroupByTest extends Migration
 {
@@ -11,7 +13,28 @@ class GroupByTest extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('group_by_records', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('text');
+            $table->integer('no');
+            $table->timestamps();
+        });
+
+        Schema::create('single_index_records', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('text')->index();
+            $table->integer('no');
+            $table->timestamps();
+        });
+
+        Schema::create('multi_index_records', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('text');
+            $table->integer('no');
+            $table->timestamps();
+
+            $table->index(["text", "no"]);
+        });
     }
 
     /**
@@ -21,6 +44,8 @@ class GroupByTest extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('group_by_records');
+        Schema::dropIfExists('single_index_records');
+        Schema::dropIfExists('multi_index_records');
     }
 }
