@@ -44,14 +44,14 @@ class JoinFiveTables extends Migration
         });
 
         // 外部キー
-//        Schema::table("join_2_records", function (Blueprint $table) {
-//            $table->foreign('1_id')->references('id')->on('join_1_records');
-//            $table->foreign('3_id')->references('id')->on('join_3_records');
-//        });
-//        Schema::table("join_4_records", function (Blueprint $table) {
-//            $table->foreign('3_id')->references('id')->on('join_3_records');
-//            $table->foreign('5_id')->references('id')->on('join_5_records');
-//        });
+        Schema::table("join_2_records", function (Blueprint $table) {
+            $table->foreign('1_id')->references('id')->on('join_1_records');
+            $table->foreign('3_id')->references('id')->on('join_3_records');
+        });
+        Schema::table("join_4_records", function (Blueprint $table) {
+            $table->foreign('3_id')->references('id')->on('join_3_records');
+            $table->foreign('5_id')->references('id')->on('join_5_records');
+        });
     }
 
     /**
