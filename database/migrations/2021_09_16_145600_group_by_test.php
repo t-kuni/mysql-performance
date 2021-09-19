@@ -20,6 +20,7 @@ class GroupByTest extends Migration
             $table->timestamps();
         });
 
+        // 単一インデックス
         Schema::create('single_index_records', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('text')->index();
@@ -27,6 +28,7 @@ class GroupByTest extends Migration
             $table->timestamps();
         });
 
+        // 複合インデックス
         Schema::create('multi_index_records', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('text');

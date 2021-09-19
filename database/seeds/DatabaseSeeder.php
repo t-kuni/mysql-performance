@@ -2,7 +2,6 @@
 
 //namespace Database\Seeders;
 
-use Faker\Generator as Faker;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -17,6 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call(\Database\Seeders\GroupByRecordTableSeeder::class);
         $this->call(\Database\Seeders\SingleIndexRecordTableSeeder::class);
         $this->call(\Database\Seeders\MultiIndexRecordTableSeeder::class);
+        $this->call(\Database\Seeders\JoinFiveTablesSeeder::class);
 
 //        DB::table('users')->truncate();
 //        DB::table('user_details')->truncate();
