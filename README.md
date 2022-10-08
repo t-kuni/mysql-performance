@@ -15,6 +15,12 @@ composer install
 php artisan migrate --seed
 ```
 
+## DBを確認する方法
+
+http://localhost:8080/
+
+## Tips
+
 MySQL Workbenchを使うと実行計画が確認しやすい
 
 ![](https://i.gyazo.com/fc5c5dc123058c736a9f7b7c89ae0451.png)
