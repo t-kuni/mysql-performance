@@ -187,7 +187,3 @@ https://atsuizo.hatenadiary.jp/entry/2016/12/12/163921
 ### 結論
 
 単に絞り込みするだけならWHERE IN+副問合せの方が早い
-
-# Todo 
-
-* [ ] WHEREでCOALESCEを使って条件式を増減させるケース
