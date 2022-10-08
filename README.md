@@ -1,13 +1,18 @@
 # MySQLのパフォーマンス確認用リポジトリ
 
+## 起動方法
+
 ```
 git clone git@github.com:t-kuni/mysql-performance.git
+cd mysql-performance
+cp .env.example .env
 cd environments
 cp docker-compose-linux.yml docker-compose.yml
 cp .env.example .env
 docker-compose up -d
 docker-compose run workspace sh
 composer install
+php artisan migrate --seed
 ```
 
 MySQL Workbenchを使うと実行計画が確認しやすい
