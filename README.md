@@ -3,6 +3,8 @@
 ```
 git clone git@github.com:t-kuni/mysql-performance.git
 cd environments
+cp docker-compose-linux.yml docker-compose.yml
+cp .env.example .env
 docker-compose up -d
 docker-compose run workspace sh
 composer install
