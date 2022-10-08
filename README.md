@@ -136,6 +136,58 @@ WHERE id IN (1, 1001, 2001, 3001, 4001, 5001, 6001, 7001, 8001, 9001) # 0.00073 
 Total: 0.0112708 sec
 ```
 
+## 関連するテーブルのカラムで絞り込みを行うケース
+
+### WHERE IN+副問合せを使う場合
+
+```SQL
+SELECT SQL_NO_CACHE *
+FROM join_1_records AS j1
+WHERE id IN (
+	SELECT `1_id` 
+    FROM join_2_records AS j2 
+    WHERE `3_id` IN (
+		SELECT id 
+		FROM join_3_records AS j3
+		WHERE id IN (
+			SELECT `3_id` 
+			FROM join_4_records AS j4 
+			WHERE `5_id` IN (
+				SELECT `id` 
+				FROM join_5_records AS j5 
+				WHERE j5.id = 10
+			)
+		)
+	)
+)
+```
+
+Total: 0.0093 sec
+
+### JOINを使う場合
+
+（試して気づいたが、1対多関連をJOINした場合、左表の行が増殖するので絞り込みに向かない。SELECTするカラムによってはDISTINCTで緩和できるが。）
+
+```SQL
+SELECT SQL_NO_CACHE DISTINCT j1.*
+FROM join_1_records AS j1
+    JOIN join_2_records AS j2 ON j1.id = j2.`1_id`
+    JOIN join_3_records AS j3 ON j2.`3_id` = j3.id
+    JOIN join_4_records AS j4 ON j3.id = j4.`3_id`
+    JOIN join_5_records AS j5 ON j4.`5_id` = j5.id AND j5.id = 10
+```
+
+Total: 0.012 sec
+
+> JOIN ON で絞り込み条件を入れるのと、JOIN ONの後WHERE句で絞り込み条件を入れるのとでは、結果が違う  
+> JOIN ONで絞り込み条件を書くと、「結果を絞るのではなく、結合前のテーブルのレコードを絞る」らしい。
+
+https://atsuizo.hatenadiary.jp/entry/2016/12/12/163921
+
+### 結論
+
+単に絞り込みするだけならWHERE IN+副問合せの方が早い
+
 # Todo 
 
 * [ ] WHEREでCOALESCEを使って条件式を増減させるケース
