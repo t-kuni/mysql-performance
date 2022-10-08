@@ -27,7 +27,7 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php -r "unlink('composer-setup.php');"
 
 # Install Node
-RUN apk add --update nodejs=14.16.1-r1 npm=14.16.1-r1
+RUN apk add --update nodejs=14.20.0-r0 npm=14.20.0-r0
 
 # Add user
 ARG APP_UID

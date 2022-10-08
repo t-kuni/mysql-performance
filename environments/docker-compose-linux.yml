@@ -34,58 +34,58 @@ services:
     volumes:
       - ${APP_CODE_DIR}:/var/www/app
 
-  scheduler:
-    container_name: XXXX-scheduler
-    build:
-      context: app
-      args:
-        - APP_UID=${APP_UID}
-        - APP_GID=${APP_GID}
-    user: "root:root"
-    entrypoint:
-      - "crond"
-      - "-f"
-      - "-l"
-      - "8"
-      - "-L"
-      - "/dev/stdout"
-    volumes:
-      - ${APP_CODE_DIR}:/var/www/app
-    restart: always
-
-  web:
-    container_name: XXXX-web
-    build:
-      context: web
-      args:
-        - APP_UID=${APP_UID}
-        - APP_GID=${APP_GID}
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ${APP_CODE_DIR}:/var/www/app
-      - ./certs:/etc/certs:ro
-    depends_on:
-      - app
-    networks:
-      default:
-        aliases:
-          - local.XXXX.com
-    restart: always
-
-  kvs:
-    container_name: XXXX-kvs
-    build: kvs
-    restart: always
-
-  mta:
-    container_name: XXXX-mta
-    image: mailhog/mailhog
-    ports:
-      - "8025:8025"
-      - "1025:1025"
-    restart: always
+#  scheduler:
+#    container_name: XXXX-scheduler
+#    build:
+#      context: app
+#      args:
+#        - APP_UID=${APP_UID}
+#        - APP_GID=${APP_GID}
+#    user: "root:root"
+#    entrypoint:
+#      - "crond"
+#      - "-f"
+#      - "-l"
+#      - "8"
+#      - "-L"
+#      - "/dev/stdout"
+#    volumes:
+#      - ${APP_CODE_DIR}:/var/www/app
+#    restart: always
+#
+#  web:
+#    container_name: XXXX-web
+#    build:
+#      context: web
+#      args:
+#        - APP_UID=${APP_UID}
+#        - APP_GID=${APP_GID}
+#    ports:
+#      - "80:80"
+#      - "443:443"
+#    volumes:
+#      - ${APP_CODE_DIR}:/var/www/app
+#      - ./certs:/etc/certs:ro
+#    depends_on:
+#      - app
+#    networks:
+#      default:
+#        aliases:
+#          - local.XXXX.com
+#    restart: always
+#
+#  kvs:
+#    container_name: XXXX-kvs
+#    build: kvs
+#    restart: always
+#
+#  mta:
+#    container_name: XXXX-mta
+#    image: mailhog/mailhog
+#    ports:
+#      - "8025:8025"
+#      - "1025:1025"
+#    restart: always
 
   db-viewer:
     container_name: XXXX-db-viewer
