@@ -208,4 +208,14 @@ WHERE id IN (
 | 5万 | フルスキャン | 0.072 sec |
 | 10万 | フルスキャン | 0.111 sec |
 
-1万件だとインデックスが使われたが、2万件以上はフルスキャンになった（正確な閾値は不明）
+1万件だとインデックスが使われたが、2万件以上はフルスキャンになった
+
+![](https://raw.githubusercontent.com/t-kuni/mysql-performance/master/doc/2022-10-12_00-21.png)
+
+フルスキャンになる理由は以下の記事が参考になる
+
+https://developers.freee.co.jp/entry/large-in-clouse-length-cause-full-scan
+
+> range optimizerの使用するメモリ量がrange_optimizer_max_mem_sizeを超えるとフルスキャンなどを用いるようになる
+
+フルスキャンを緩和or回避する方法としては、range_optimizer_max_mem_sizeを大きくするか、IN句の値を分割する方法がある
